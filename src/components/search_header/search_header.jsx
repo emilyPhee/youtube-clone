@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
 import styles from './search_header.module.css';
 
-import search from '../../../src/search.png';
-import logo from '../../../src/logo.png';
-
-const SearchHeader = props => {
+const SearchHeader = ({ handleSearch }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleChange = event => {
     setSearchValue(event.target.value);
   };
   const handleSubmit = event => {
-    alert('Input submitted: ' + searchValue);
+    handleSearch(searchValue);
     event.preventDefault();
   };
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
-        <img src={logo} alt="logo" />
+        <img src="/images/logo.png" alt="logo" />
         <p>YouTube</p>
       </div>
 
@@ -26,7 +23,7 @@ const SearchHeader = props => {
           <input type="text" value={searchValue} onChange={handleChange} />
           <button type="submit">
             <img
-              src={search}
+              src="/images/search.png"
               alt="submit button"
               className={styles.submitBtn}
             />
@@ -34,7 +31,7 @@ const SearchHeader = props => {
         </form>
       </div>
 
-      <div>User</div>
+      <div className={styles.user}></div>
     </div>
   );
 };
