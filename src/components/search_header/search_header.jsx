@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './search_header.module.css';
 
-const SearchHeader = ({ handleSearch }) => {
-  const [searchValue, setSearchValue] = useState('');
+const SearchHeader = ({ onSearch }) => {
+  const inputRef = useRef();
+  const handleSearch = () => {
+    const value = inputRef.current.value;
+    onSearch(value);
+  };
 
-  const handleChange = event => {
-    setSearchValue(event.target.value);
+  const onClick = () => {
+    handleSearch();
   };
-  const handleSubmit = event => {
-    handleSearch(searchValue);
-    event.preventDefault();
+
+  const onKeyPress = event => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
   };
+
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
@@ -19,16 +26,21 @@ const SearchHeader = ({ handleSearch }) => {
       </div>
 
       <div className={styles.inputformContainer}>
-        <form onSubmit={handleSubmit}>
-          <input type="text" value={searchValue} onChange={handleChange} />
-          <button type="submit">
-            <img
-              src="/images/search.png"
-              alt="submit button"
-              className={styles.submitBtn}
-            />
-          </button>
-        </form>
+        <div className={styles.inputContainer}>
+          <input
+            ref={inputRef}
+            type="search"
+            placeholder="Search..."
+            onKeyPress={onKeyPress}
+          />
+        </div>
+        <button type="submit" onClick={onClick}>
+          <img
+            src="/images/search.png"
+            alt="submit button"
+            className={styles.submitBtn}
+          />
+        </button>
       </div>
 
       <div className={styles.user}></div>
