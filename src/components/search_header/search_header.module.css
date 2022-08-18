@@ -6,6 +6,10 @@
 
   background-color: rgb(33, 33, 33);
   color: #fff;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logoContainer {

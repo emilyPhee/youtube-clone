@@ -25,7 +25,7 @@ const SearchHeader = ({ onSearch }) => {
         <p>YouTube</p>
       </div>
 
-      <div className={styles.inputformContainer}>
+      <div>
         <div className={styles.inputContainer}>
           <input
             ref={inputRef}
