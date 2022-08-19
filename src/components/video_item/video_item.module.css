@@ -7,7 +7,19 @@
 .videoLink {
   width: 30rem;
   padding: 0.2em;
+  text-decoration: none;
+  color: black;
   list-style: none;
+}
+
+.videoLink:active {
+  text-decoration: none;
+  color: black;
+}
+
+.videoLink:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .video {

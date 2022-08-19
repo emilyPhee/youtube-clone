@@ -20,13 +20,13 @@ function App({ youtube }) {
       .mostPopular() //
       .then(videos => setVideos(videos))
       .catch(error => console.log('error', error));
-  }, []);
+  }, [youtube]);
   return (
     <>
       <SearchHeader onSearch={handleSearch} />
       <Routes>
         <Route path="/" element={<VideoList videos={videos} />} />
-        <Route path="/details" element={<VideoDetails />} />
+        <Route path="/details" element={<VideoDetails videoInfo={videos} />} />
         <Route />
       </Routes>
       {/* <VideoList videos={videos} /> */}

@@ -1,0 +1,25 @@
+.videoDetailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: rgb(27, 27, 27);
+  color: #fff; */
+}
+
+.leftSideContainer {
+  width: 50rem;
+  padding: 1rem 1rem 0;
+}
+.rightSideContainer {
+  width: 30rem;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.expandBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0;
+}

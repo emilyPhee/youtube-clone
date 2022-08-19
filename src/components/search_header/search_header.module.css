@@ -15,6 +15,12 @@
 .logoContainer {
   display: flex;
   align-items: center;
+  text-decoration: none;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logoContainer img {
@@ -38,9 +44,14 @@
   border-radius: 50%;
 }
 
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
 .inputContainer {
   position: relative;
   display: inline-block;
+
   width: 30rem;
   height: 3rem;
 }
