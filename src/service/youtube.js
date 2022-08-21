@@ -10,7 +10,7 @@ class Youtube {
   // it returns Promise
   async mostPopular() {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${this.key}`,
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=27&key=${this.key}`,
       this.getRequestOptions
     );
 
@@ -20,7 +20,7 @@ class Youtube {
 
   async search(query) {
     const response = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${this.key}`,
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=27&q=${query}&type=video&key=${this.key}`,
       this.getRequestOptions
     );
 

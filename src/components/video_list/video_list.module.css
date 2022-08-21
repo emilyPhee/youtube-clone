@@ -2,5 +2,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 0;
+  padding: 0;
+}
+
+.videosContainer {
+  display: flex;
+  background-color: rgb(23, 23, 23);
+}
+
+.videos > * {
+  margin-bottom: 0.1rem;
 }

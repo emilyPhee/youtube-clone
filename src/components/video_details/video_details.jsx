@@ -16,14 +16,16 @@ const VideoDetails = props => {
   return (
     <section className={styles.videoDetailsContainer}>
       <div className={styles.leftSideContainer}>
-        <iframe
-          allowFullScreen
-          width="100%"
-          height="500px"
-          title="Video Player"
-          src={`http://www.youtube.com/embed/${videoId}`}
-          frameBorder="0"
-        ></iframe>
+        <div>
+          <iframe
+            allowFullScreen
+            width="100%"
+            height="500px"
+            title="Video Player"
+            src={`http://www.youtube.com/embed/${videoId}`}
+            frameBorder="0"
+          ></iframe>
+        </div>
         <h2>{youtubeVideoData.title}</h2>
         <h3>{youtubeVideoData.channelTitle}</h3>
         <pre className={styles.description}>

@@ -29,7 +29,6 @@ function App({ youtube }) {
         <Route path="/details" element={<VideoDetails videoInfo={videos} />} />
         <Route />
       </Routes>
-      {/* <VideoList videos={videos} /> */}
     </>
   );
 }

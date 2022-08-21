@@ -1,46 +1,59 @@
-/* .container {
-  width: 40%;
-  padding: 0.2em;
+.container {
   display: flex;
-} */
+  justify-content: center;
+}
 
 .videoLink {
-  width: 30rem;
-  padding: 0.2em;
+  padding: 0.8em;
+
   text-decoration: none;
-  color: black;
+  color: #fff;
   list-style: none;
+  min-width: 22rem;
 }
 
 .videoLink:active {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .videoLink:visited {
   text-decoration: none;
-  color: black;
+  color: #fff;
 }
 
 .video {
   width: 100%;
   height: 100%;
-  display: flex;
+  padding: 0.7rem;
+}
 
-  align-items: center;
-  border: 1px solid lightgray;
-  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
-  cursor: pointer;
-  transition: transform 250ms ease-in;
+.video.home {
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  /* align-items: center; */
+  padding: 0.4rem;
+  padding-bottom: 2rem;
+  padding-top: 0;
+}
+
+.video.details {
+  display: flex;
 }
 
 .video:hover {
-  transform: scale(1.02);
+  background-color: rgb(32, 32, 32);
 }
 
-.thumbnail {
-  width: 40%;
+.video.details > .thumbnail {
+  width: 45%;
   height: 100%;
+  margin-right: 0.7rem;
+}
+
+.video.home > .thumbnail {
+  margin-bottom: 0.5rem;
 }
 
 .metadata {
@@ -50,9 +63,10 @@
 .title,
 .channel {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .channel {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }

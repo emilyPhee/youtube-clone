@@ -54,7 +54,9 @@ const SearchHeader = ({ onSearch }) => {
         </button>
       </div>
 
-      <div className={styles.user}></div>
+      <a href="https://github.com/emilyPhee" target="_blank" rel="noreferrer">
+        <div className={styles.user}></div>
+      </a>
     </div>
   );
 };
