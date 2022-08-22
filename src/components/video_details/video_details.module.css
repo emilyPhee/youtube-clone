@@ -1,18 +1,22 @@
 .videoDetailsContainer {
   display: flex;
   flex-wrap: wrap;
+  /* flex: 1 0 auto; */
   background-color: rgb(23, 23, 23);
   color: #fff;
 }
 
 .leftSideContainer {
   /* width: 50rem; */
-  flex-basis: 70%;
+  /* flex-basis: 70%; */
+  flex: 1 1 70%;
+
   padding: 1rem 1rem 0;
 }
 .rightSideContainer {
-  /* width: 30rem; */
-  flex-basis: 30%;
+  width: 100%;
+  flex: 1 1 30%;
+  /* flex-basis: 30%; */
 }
 
 .description {
@@ -29,4 +33,7 @@
 
 iframe {
   overflow: auto;
+}
+
+@media screen and (max-width: 48rem) {
 }

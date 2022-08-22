@@ -70,3 +70,9 @@
 .channel {
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 50rem) {
+  .video.details > .thumbnail {
+    width: 10rem;
+  }
+}
