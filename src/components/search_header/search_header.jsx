@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './search_header.module.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = memo(({ onSearch }) => {
   const navigate = useNavigate();
 
   const inputRef = useRef();
@@ -23,9 +23,7 @@ const SearchHeader = ({ onSearch }) => {
     }
   };
 
-  const location = useLocation();
-  console.log('location', location);
-
+  console.log('header!!!');
   return (
     <div className={styles.headerContainer}>
       <Link className={styles.linkStyle} to="/">
@@ -59,6 +57,6 @@ const SearchHeader = ({ onSearch }) => {
       </a>
     </div>
   );
-};
+});
 
 export default SearchHeader;

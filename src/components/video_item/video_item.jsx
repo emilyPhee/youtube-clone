@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './video_item.module.css';
 import { Link, useLocation } from 'react-router-dom';
 
-const VideoItem = ({ video: { snippet }, video }) => {
+const VideoItem = memo(({ video: { snippet }, video }) => {
   const location = useLocation();
 
   // if location === '/' ->  home/main page
@@ -32,6 +32,5 @@ const VideoItem = ({ video: { snippet }, video }) => {
       </li>
     </Link>
   );
-};
-
+});
 export default VideoItem;

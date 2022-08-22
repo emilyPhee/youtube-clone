@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import SearchHeader from './components/search_header/search_header';
 import VideoList from './components/video_list/video_list';
@@ -9,11 +9,14 @@ import { Route, Routes } from 'react-router-dom';
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
 
-  const handleSearch = query => {
-    youtube
-      .search(query) //
-      .then(videos => setVideos(videos));
-  };
+  const handleSearch = useCallback(
+    query => {
+      youtube
+        .search(query) //
+        .then(videos => setVideos(videos));
+    },
+    [youtube]
+  );
 
   useEffect(() => {
     youtube
