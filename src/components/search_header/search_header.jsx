@@ -51,8 +51,15 @@ const SearchHeader = memo(({ onSearch }) => {
         </button>
       </div>
 
-      <a href="https://github.com/emilyPhee" target="_blank" rel="noreferrer">
-        <div className={styles.user}></div>
+      <a
+        className={styles.user}
+        href="https://github.com/emilyPhee"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className={styles.gitHubIcon}>
+          <i className="fa-brands fa-github"></i>
+        </div>
       </a>
     </div>
   );

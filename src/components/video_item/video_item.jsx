@@ -25,8 +25,8 @@ const VideoItem = memo(({ video: { snippet }, video }) => {
             alt="video thumbnail"
           />
           <div className={styles.metadata}>
-            <p className={styles.title}>{snippet.title}</p>
-            <p className={styles.channel}>{snippet.channelTitle}</p>
+            <h2 className={styles.title}>{snippet.title}</h2>
+            <h4 className={styles.channel}>{snippet.channelTitle}</h4>
           </div>
         </div>
       </li>

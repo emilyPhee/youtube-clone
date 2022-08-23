@@ -63,12 +63,14 @@
 .title,
 .channel {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
 
 .channel {
   font-size: 0.8rem;
+  font-weight: normal;
+  margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 50rem) {

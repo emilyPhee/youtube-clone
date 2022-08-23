@@ -15,6 +15,14 @@
   flex: 1 2 30%;
 }
 
+.title {
+  font-weight: normal;
+}
+
+.channelTitle {
+  /* font-weight: normal; */
+}
+
 .description {
   white-space: pre-wrap;
 }

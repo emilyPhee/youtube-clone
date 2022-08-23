@@ -26,8 +26,8 @@ const VideoDetails = props => {
             frameBorder="0"
           ></iframe>
         </div>
-        <h2>{youtubeVideoData.title}</h2>
-        <h3>{youtubeVideoData.channelTitle}</h3>
+        <h2 className={styles.title}>{youtubeVideoData.title}</h2>
+        <h3 className={styles.channelTitle}>{youtubeVideoData.channelTitle}</h3>
         <pre className={styles.description}>
           {showMore ? descriptionText : `${descriptionText.substring(0, 250)}`}
         </pre>

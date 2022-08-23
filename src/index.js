@@ -6,6 +6,8 @@ import Youtube from './service/youtube';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 
+import '@fortawesome/fontawesome-free/js/all.js';
+
 const httpClient = axios.create({
   baseURL: 'https://www.googleapis.com/youtube/v3',
   params: { key: process.env.REACT_APP_YOUTUBE_API_KEY },
