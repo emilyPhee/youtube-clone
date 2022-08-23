@@ -22,7 +22,7 @@ const VideoDetails = props => {
             width="100%"
             height="500px"
             title="Video Player"
-            src={`http://www.youtube.com/embed/${videoId}`}
+            src={`https://www.youtube.com/embed/${videoId}`}
             frameBorder="0"
           ></iframe>
         </div>
