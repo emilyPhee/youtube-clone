@@ -23,7 +23,6 @@ const SearchHeader = memo(({ onSearch }) => {
     }
   };
 
-  console.log('header!!!');
   return (
     <div className={styles.headerContainer}>
       <Link className={styles.linkStyle} to="/">
